@@ -34,6 +34,13 @@ RegisterController::logout();
 
 ```
 
+## Vendor publish
+Publishing migration files
+```
+php artisan vendor:publish --tag:migration
+```
+
+
 ### Testing
 
 ```bash
