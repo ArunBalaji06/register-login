@@ -46,6 +46,13 @@ class RegisterLoginServiceProvider extends ServiceProvider
             // $this->publishes([
             //     __DIR__.'/../resources/lang' => resource_path('lang/vendor/register-login'),
             // ], 'lang');
+
+            // Publishing the migratin files.
+            $this->publishes([
+                __DIR__.'/Database/Migrations' => 'database/migrations',
+            ], 'migration');
+
+
         }
     }
 
