@@ -1,0 +1,54 @@
+{
+    "name": "devpac/register-login",
+    "description": "",
+    "keywords": [
+        "devpac",
+        "register-login"
+    ],
+    "homepage": "https://github.com/devpac/register-login",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "ArunBalaji06",
+            "email": "arunbalaji@sparkouttech.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devpac\\RegisterLogin\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Devpac\\RegisterLogin\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devpac\\RegisterLogin\\RegisterLoginServiceProvider"
+            ],
+            "aliases": {
+                "RegisterLogin": "Devpac\\RegisterLogin\\RegisterLoginFacade"
+            }
+        }
+    }
+}
